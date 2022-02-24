@@ -47,7 +47,7 @@ endif(CMAKE_COMPILER_IS_GNUCC)
 
 # Intel compiler
 if(${CMAKE_C_COMPILER_ID} MATCHES "Intel")
-  set(GKlib_COPTIONS "${GKlib_COPTIONS} -xHost -std=c99")
+  set(GKlib_COPTIONS "${GKlib_COPTIONS} -xHost -std=c99 -D_POSIX_C_SOURCE=200809")
 endif()
 
 # Find OpenMP if it is requested.
